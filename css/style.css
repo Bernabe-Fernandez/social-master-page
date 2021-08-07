@@ -164,3 +164,49 @@ h3 {
 .footer {
   margin: 7rem 0;
 }
+
+/*** Responsive Desktop ***/
+
+@media (min-width: 1024px) {
+  .tarjeta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 90%;
+    margin: 5rem auto;
+  }
+
+  .calificaciones {
+    display: flex;
+    flex-direction: column;
+  }
+  .calificacion:nth-child(1) {
+    flex-direction: row;
+    justify-content: start;
+  }
+  .calificacion:nth-child(1) .stars {
+    margin: auto 1rem;
+  }
+
+  .calificacion:nth-child(2) {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .calificacion:nth-child(2) .stars {
+    margin: auto 1rem;
+  }
+
+  .calificacion:nth-child(3) {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .calificacion:nth-child(3) .stars {
+    margin: auto 1rem;
+  }
+
+  .tarjetas-clientes {
+    grid-column: span 2;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+  }
+}
