@@ -1,0 +1,166 @@
+/***** Custom Properties *****/
+:root {
+  /*** Colores ***/
+  --DarkMagenta: hsl(300, 43%, 22%);
+  --SoftPink: hsl(333, 80%, 67%);
+  --DarkGrayishMagenta: hsl(303, 10%, 53%);
+  --LightGrayishMagenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+
+  /*** Tipografia ***/
+  --font: "Spartan", sans-serif;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+}
+
+/***** Reseteo *****/
+
+html {
+  box-sizing: border-box; /*Hack para Box Model*/
+  font-size: 62.5%; /*Esto permite que 1 rem sea igual a 10px*/
+}
+
+*,
+*:before,
+*:after {
+  /*Hack para Box Model*/
+  box-sizing: inherit;
+}
+
+/*** Modificacion del body ***/
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-size: 1.5rem;
+}
+
+/*** Definimos ancho de las imagenes ***/
+img {
+  width: 100%; /*ancho de las imagenes*/
+}
+
+/*** Determinamos los estilos de los titulos ***/
+h1,
+h2,
+h3 {
+  font-family: var(--font);
+}
+
+/** Definimos los tamaños proporcionales de los titulos **/
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+/***** Componentes *****/
+.contenedor {
+  max-width: 120rem; /*ancho maximo para el contenedor*/
+  margin: 0 auto; /*esto nos ayuda a que el contenedor este centrado*/
+}
+
+/***** Utilidades *****/
+
+/***** Estilo de la Pagina *****/
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  text-align: center;
+  width: 90%;
+  margin: 3rem auto 3rem auto;
+}
+
+.header-titulo {
+  color: var(--DarkMagenta);
+}
+
+.header-info {
+  color: var(--DarkGrayishMagenta);
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+.calificacion {
+  background-color: var(--LightGrayishMagenta);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 90%;
+  margin: 0 auto 2rem auto;
+  border-radius: 0.5rem;
+}
+
+.stars {
+  letter-spacing: 0.8rem;
+}
+
+.calificacion-titulo {
+  font-family: var(--font);
+  font-weight: var(--font-bold);
+  color: var(--DarkMagenta);
+}
+
+.tarjetas-clientes {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.tarjeta-cliente {
+  background-color: var(--DarkMagenta);
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3rem;
+  margin-bottom: 2rem;
+}
+
+.cliente-info {
+  display: grid;
+  grid-template-columns: 20%, 80%;
+  grid-row: 1/2;
+  grid-column: span 2;
+}
+
+.img-cliente {
+  border-radius: 15rem;
+  grid-column: 1/2;
+  width: 50%;
+  margin: auto;
+}
+
+.name-cliente {
+  grid-column: 2/3;
+  font-size: 1.5rem;
+  color: var(--White);
+  font-weight: var(--font-normal);
+  width: 50%;
+  line-height: 2rem;
+}
+
+.name-cliente span {
+  color: var(--SoftPink);
+}
+
+.opinion {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  color: var(--LightGrayishMagenta);
+  line-height: 2.5rem;
+  font-family: var(--font);
+}
+
+.footer {
+  margin: 7rem 0;
+}
